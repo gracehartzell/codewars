@@ -1,0 +1,1 @@
+This is my collection of toy problems that I'm accumulating as I grow and learn. First try dates are noted before the solution to each problem so that I can go back at some point and see how I've grown and been able to make my code more succinct.
