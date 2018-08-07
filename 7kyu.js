@@ -37,3 +37,28 @@ function getCount2(str) {
   }
 console.log(getCount2('cookie'));
 
+/***************************************************
+ *************** BUMPS IN THE ROAD *****************/
+/* Given a string showing either flat road ("_") or bumps ("n"), 
+work out if you make it home safely. 15 bumps or under, 
+return "Woohoo!", over 15 bumps return "Car Dead". */
+//first try 07/8/18)
+
+function bump(x) {
+    let xCount = 0;
+    let letter = x.indexOf('n');
+
+    while ( letter !== -1) {
+        xCount++
+        letter = x.indexOf('n', letter + 1);
+    }
+    // (xCount > 15) ? "Car Dead" : "Woohoo!";
+    if (xCount > 15) {
+        return "Car Dead"
+    }
+    else {
+        return "Woohoo!"
+    }
+}
+
+console.log(bump("nnnnnnnnnnnnnnnnnnnnnnn"));

@@ -52,6 +52,37 @@ missing letters: "a,b,c,d,e,f,g,i,j,k,m,n,p,q,r,s,t,u,v,w,x,z"
 output: "hIJKMNPQRSTUVWXZoPQRSTUVWXZlMNPQRSTUVWXZlyZ"
 
 ``` javascript
+function insertMissingLetters(str){
+  const alpha = [...'abcdefghijklmnopqrstuvwxyz'];
+  const missingLetters = [];
+  const output = [];
+  const occurences = {};
+  
+  //generate missingLetters
+  for(let i = 0; i < alpha.length; i++){
+    const alphaLetter = alpha[i];
+    if(str.indexOf(alphaLetter) === -1){
+      missingLetters.push(alphaLetter);
+    } else {
+      missingLetters.push('');
+    }
+  }
+  //merge
+  for(let j = 0; j < str.length; j++){
+    const strLetter = str[j];
+    const position = alpha.indexOf(strLetter);
+    if(occurences[strLetter]){
+     occurences[strLetter] += 1;
+      output.push(strLetter);
+    } else {
+      occurences[strLetter] = 1;
+      output.push(strLetter.concat(missingLetters.slice(position).join('').toUpperCase()));
+    }
+  }
+  return output.join('');
+}
+
+insertMissingLetters("hello")
 
 
 ```
