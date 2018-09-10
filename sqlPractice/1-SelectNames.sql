@@ -61,9 +61,9 @@ WHERE capital LIKE concat ('%', name, '%')
 -- You should include Mexico City as it is longer than Mexico. You should not include Luxembourg as the capital is the same as the country.
 SELECT capital, name 
  FROM world
- WHERE capital LIKE concat ('%', name '%') AND capital > name
+ WHERE capital LIKE concat ('%', name, '%') AND capital > name
 
- -- 15. For Monaco-Ville the name is Monaco and the extension is -Ville.
+-- 15. For Monaco-Ville the name is Monaco and the extension is -Ville.
 -- Show the name and the extension where the capital is an extension of name of the country. You can use the SQL function REPLACE.
 SELECT name, REPLACE(capital, name, '')
  FROM world
