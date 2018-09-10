@@ -79,3 +79,83 @@ function getCount2(str) {
 console.log(getCount2('cookie'));
 ```
 
+**Who's Online?**
+Given an input of an array of objects containing usernames, status and time since last activity (in mins), create a function to work out who is online, offline and away.
+
+If someone is online but their lastActivity was more than 10 minutes ago they are to be considered away.
+
+The input data has the following structure:
+
+```javascript
+[{
+  username: 'David',
+  status: 'online',
+  lastActivity: 10
+}, {
+  username: 'Lucy', 
+  status: 'offline',
+  lastActivity: 22
+}, {
+  username: 'Bob', 
+  status: 'online',
+  lastActivity: 104
+}]
+// EXPECTED OUTPUT:
+{
+  online: ['David'],
+  offline: ['Lucy'],
+  away: ['Bob']
+}
+```
+Username will always be a string, status will always be either 'online' or 'offline' and lastActivity will always be number >= 0.
+
+Finally, if you have no friends in your chat application, the input will be an empty array []. In this case you should return an empty object{}.
+
+
+
+
+**Simple Letter Removal**
+
+In this Kata, you will be given a lower case string and your task will be to remove k characters from that string using the following rule:
+
+```js
+- first remove all letter 'a', followed by letter 'b', then 'c', etc...
+- remove the leftmost character first.
+
+// For example: 
+solve('abracadabra', 1) = 'bracadabra' # remove the leftmost 'a'.
+solve('abracadabra', 2) = 'brcadabra'  # remove 2 'a' from the left.
+solve('abracadabra', 6) = 'rcdbr'      # remove 5 'a', remove 1 'b' 
+solve('abracadabra', 8) = 'rdr'
+solve('abracadabra',50) = ''
+```
+
+*Solution*
+
+
+
+
+
+
+**Remove Duplicate Words**
+
+Your task is to remove all duplicate words from string, leaving only single (first) words entries.
+
+*Solution*
+```js
+function removeDuplicateWords(str) {
+    let strArray = str.split(' ');
+    let filteredArray = [];
+
+    for (let i = 0; i < strArray.length; i++) {
+        if(filteredArray.indexOf(strArray[i]) === -1) {
+            filteredArray.push(strArray[i]);
+        }
+    };
+   
+    return filteredArray.join(' ');
+};
+``` 
+
+I didn't have too much difficulty with this one but I know that the way I did it is very rudimentary. When I looked through other solutions (when they became unlocked after submitting my final solution), the majority of the solutions used methods that I'm not familiar with. 
+

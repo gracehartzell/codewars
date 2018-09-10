@@ -1,4 +1,4 @@
-DECODE THE MORSE CODE
+##DECODE THE MORSE CODE
 In this kata you have to write a simple Morse code decoder. While the Morse code is now mostly superceded by voice and digital data communication channels, it still has its use in some applications around the world.
 The Morse code encodes every character as a sequence of "dots" and "dashes". For example, the letter A is coded as ·−, letter Q is coded as −−·−, and digit 1 is coded as ·−−−−. The Morse code is case-insensitive, traditionally capital letters are used. When the message is written in Morse code, a single space is used to separate the character codes and 3 spaces are used to separate words. For example, the message HEY JUDE in Morse code is ···· · −·−−   ·−−− ··− −·· ·.
 
@@ -33,7 +33,7 @@ console.log(decodeMorse('.... . -.--  . --- ..- -.. .'));
 
 
 
-MISSING ALPHABET
+##MISSING ALPHABET
 In this Kata you have to create a function,named insertMissingLetters,that takes in a string and outputs the same string processed in a particular way.
 
 The function should insert only after the first occurence of each character of the input string, all the alphabet letters that:
@@ -84,5 +84,14 @@ function insertMissingLetters(str){
 
 insertMissingLetters("hello")
 
+
+```
+
+##Multiples of 3 or 5
+If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+
+Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
+
+```js
 
 ```
