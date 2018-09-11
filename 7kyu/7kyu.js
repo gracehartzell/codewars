@@ -105,7 +105,7 @@ console.log(whosOnline(friends));
 // const result = inventory.find( fruit => fruit.name === 'cherries' );
 
 /***************************************************
- *************** SIMPLE LETTER REMOVAL *********************
+ ************* SIMPLE LETTER REMOVAL ***************
  ***************************************************/
 
  // k is the number of characters to remove
@@ -171,16 +171,27 @@ function removeDuplicateWords(str) {
 
 console.log(removeDuplicateWords('alpha beta beta gamma gamma gamma delta'));
 
+
 /***************************************************
- *************** SUM OF ODD NUMBERS ****************
+ ****************** ALL UNIQUE *********************
  ***************************************************/
 
- function rowSumOddNumbers(n) {
-    // define rows, odd numbers, sum
-    const rows;
-    let sum;
-    // search for odd numbers 
+function hasUniqueChars(str){
+    
+    for(let i=0; i < str.length; i++){
+        let temp = str[i];
 
-    // return sum of odd numbers
-    return
-}
+        for(let j = i+1; j <= str.length - 1; j++) {
+            if (temp === str[j]) {
+                return false;
+            }
+        };  
+    };            
+    return true;
+};
+
+
+// TESTS
+console.log(hasUniqueChars('  nAa') === false);
+console.log(hasUniqueChars('abcdef') === true);
+console.log(hasUniqueChars('++-') === false);

@@ -1,4 +1,4 @@
-**Bumps in the Road:**
+## Bumps in the Road:
 
 Your car is old, it breaks easily. The shock absorbers are gone and you think it can handle about 15 more bumps before it dies totally.
 
@@ -27,7 +27,7 @@ I passed all tests on the first try; however, I did have some trouble rememberin
 
 
 
-**Get the Middle Character**
+## Get the Middle Character
 
 You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
 
@@ -56,7 +56,7 @@ console.log(getMiddle('testing'));
 ```
 
 
-**Vowel Count**
+## Vowel Count
 
 Return the number (count) of vowels in the given string.
 We will consider a, e, i, o, and u as vowels for this Kata.
@@ -79,7 +79,8 @@ function getCount2(str) {
 console.log(getCount2('cookie'));
 ```
 
-**Who's Online?**
+## Who's Online?
+
 Given an input of an array of objects containing usernames, status and time since last activity (in mins), create a function to work out who is online, offline and away.
 
 If someone is online but their lastActivity was more than 10 minutes ago they are to be considered away.
@@ -114,7 +115,7 @@ Finally, if you have no friends in your chat application, the input will be an e
 
 
 
-**Simple Letter Removal**
+## Simple Letter Removal
 
 In this Kata, you will be given a lower case string and your task will be to remove k characters from that string using the following rule:
 
@@ -137,7 +138,7 @@ solve('abracadabra',50) = ''
 
 
 
-**Remove Duplicate Words**
+## Remove Duplicate Words
 
 Your task is to remove all duplicate words from string, leaving only single (first) words entries.
 
@@ -159,3 +160,25 @@ function removeDuplicateWords(str) {
 
 I didn't have too much difficulty with this one but I know that the way I did it is very rudimentary. When I looked through other solutions (when they became unlocked after submitting my final solution), the majority of the solutions used methods that I'm not familiar with. 
 
+
+## All unique
+
+Write a program to determine if a string contains all unique characters. Return true if it does and false otherwise. The string may contain any of the 128 ASCII characters.
+
+FIRST SOLUTION (11 SEPT 2018:
+```js
+function hasUniqueChars(str){
+    
+    for(let i=0; i < str.length; i++){
+        let temp = str[i];
+
+        for(let j = i+1; j <= str.length - 1; j++) {
+            if (temp === str[j]) {
+                return false;
+            }
+        };  
+    };            
+    return true;
+};
+```
+After looking at other solutions, I decided to look into *Array.prototype.every()* since that is frequently used and I'm not familiar with it. I plan to do my next soluton for this problem using that method (when I fully understand it, of course.)
