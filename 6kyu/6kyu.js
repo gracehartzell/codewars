@@ -75,5 +75,51 @@ console.log(solution(10));
 // }
 
 
+/***************************************************
+ ***************** DETECT PANGRAM ******************
+ ***************************************************/
+
+function isPangram(string) {
+    let letters = 'abcdefghijklmnopqrstuvwxyz';
+    let lowerCaseString = string.toLowerCase();
+    for (let i = 0; i < letters.length; i++) {
+        if (lowerCaseString.indexOf(letters[i]) === -1) {
+            return false;
+        }
+    }
+    return true;
+} 
 
 
+console.log(isPangram('The quick brown fox jumps over the lazy dog.') === true);
+console.log(isPangram('This is not a pangram.') === false);
+
+
+/***************************************************
+ *** ALL ARRAY ELEMENTS EXCEPT SPECIFIED INDEXES ***
+ ***************************************************/
+
+// var array = ['a', 'b', 'c', 'd', 'e'];
+// var array2 = array.except([1,3]);
+// array2 should contain ['a', 'c', 'e']
+
+// Array.prototype.except = function(keys) {
+//     let newArr = [];
+
+//     for (let i = 0; i < this.length; i++) {
+
+//     }
+
+
+// };
+
+// this.filter
+
+/***************************************************
+ *************** BREAK CAMEL CASE ******************
+ ***************************************************/
+function solution(str) {
+   return `${str}`.split(/(?=[A-Z])/).join(' '); //regex: must be followed by an uppercase letter 
+}
+
+console.log(solution('camelCasing'));

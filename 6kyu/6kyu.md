@@ -81,10 +81,6 @@ function insertMissingLetters(str){
   }
   return output.join('');
 }
-
-insertMissingLetters("hello")
-
-
 ```
 
 ##Multiples of 3 or 5
@@ -92,6 +88,83 @@ If we list all the natural numbers below 10 that are multiples of 3 or 5, we get
 
 Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
 
+**SOLUTION:**
 ```js
+function solution(number) {
+    let intArray = [];
+
+    for (i = 1; i < number; i++) {
+        if (i % 3 === 0 || i % 5 === 0) {
+            intArray.push(i);
+        }
+        console.log(intArray)
+    }
+    return intArray.reduce((a,b) => a + b, 0)
+}
+```
+
+## Detect Pangram
+A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
+
+Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
+
+**SOLUTION:**
+
+```js
+function isPangram(string) {
+    let letters = 'abcdefghijklmnopqrstuvwxyz';
+    let lowerCaseString = string.toLowerCase();
+    for (let i = 0; i < letters.length; i++) {
+        if (lowerCaseString.indexOf(letters[i]) === -1) {
+            return false;
+        }
+    }
+    return true;
+} function isPangram(string) {
+    let letters = 'abcdefghijklmnopqrstuvwxyz';
+    let lowerCaseString = string.toLowerCase();
+    for (let i = 0; i < letters.length; i++) {
+        if (lowerCaseString.indexOf(letters[i]) === -1) {
+            return false;
+        }
+    }
+    return true;
+}
+```
+
+## Get all array elements except those with specified indexes
+Extend the Array prototype/class with a function to return all elements of that array, except the ones with the indexes passed in the parameter.
+
+The function should accept either an array or a single integer as parameters, like this: 
+```js
+var array = ['a', 'b', 'c', 'd', 'e'];
+var array2 = array.except([1,3]);
+// array2 should contain ['a', 'c', 'e']
+
+//OR 
+var array = ['a', 'b', 'c', 'd', 'e'];
+var array2 = array.except(1);
+// array2 should contain ['a', 'c', 'd', 'e']
+```
+
+**SOLUTION:**
+```JS
 
 ```
+
+## Largest Number Arrangement
+Create a function that takes a list of one or more non-negative integers, and arranges them such that they form the largest possible number.
+
+Examples:
+```js
+largestArrangement([4, 50, 8, 145]) returns 8504145 (8-50-4-145)
+
+largestArrangement([4, 40, 7]) returns 7440 (7-4-40)
+
+largestArrangement([4, 46, 7]) returns 7464 (7-46-4)
+
+largestArrangement([5, 60, 299, 56]) returns 60565299 (60-56-5-299)
+
+largestArrangement([5, 2, 1, 9, 50, 56]) returns 95655021 (9-56-5-50-21)
+```
+

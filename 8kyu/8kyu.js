@@ -33,8 +33,7 @@ Used EJS, MDN, and above URL for reference with regex
 
 
 
-// FAKE BINARY: Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. 
-//  Return the resulting string.  
+// FAKE BINARY
 // First try: (27/7/2018)
 function fakeBinary(x){
     return x.replace(/[1234]/gi, '0').replace(/[56789]/gi, '1');
@@ -42,4 +41,12 @@ function fakeBinary(x){
 
 console.log(fakeBinary('93829')) //testing returns 10101
 
+// BASIC MATH OPERATIONS
+function basicOp( operation, value1, value2 ) {
+    return eval(`${value1} ${operation} ${value2}`)
+}
+
+console.log(basicOp('+', 4, 7));
+
+// PILLARS
 
