@@ -40,9 +40,9 @@ function longest(arr, n) {
     return preservedOriginal[n-1];
 }
 
-console.log(longest(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k','l'], 1) === 'a'); 
-console.log(longest(['aa', 'bb', 'cc', 'dd', 'eee', 'b', 'f', 'ff', 'hhh', 'gggg'],4) === 'aa')
-console.log(longest(['Hello','World','Codewars','Katas'],4) === 'Katas');
+// console.log(longest(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k','l'], 1) === 'a'); 
+// console.log(longest(['aa', 'bb', 'cc', 'dd', 'eee', 'b', 'f', 'ff', 'hhh', 'gggg'],4) === 'aa')
+// console.log(longest(['Hello','World','Codewars','Katas'],4) === 'Katas');
 
 
 /***************************************************
@@ -62,7 +62,7 @@ function solution(number) {
 }
 
 
-console.log(solution(10)); 
+// console.log(solution(10)); 
 
 // function sumOfMultiples(number) {
 //     let sum = 0;
@@ -91,8 +91,8 @@ function isPangram(string) {
 } 
 
 
-console.log(isPangram('The quick brown fox jumps over the lazy dog.') === true);
-console.log(isPangram('This is not a pangram.') === false);
+// console.log(isPangram('The quick brown fox jumps over the lazy dog.') === true);
+// console.log(isPangram('This is not a pangram.') === false);
 
 
 /***************************************************
@@ -122,4 +122,35 @@ function solution(str) {
    return `${str}`.split(/(?=[A-Z])/).join(' '); //regex: must be followed by an uppercase letter 
 }
 
-console.log(solution('camelCasing'));
+// console.log(solution('camelCasing'));
+
+
+/***************************************************
+ ************ REVERSE EVERY OTHER STRING ***********
+ ***************************************************/
+
+function reverseStr(str) {
+    // turn string into array
+    let array = str.split(' ');
+    // get all odd words and reverse them
+    const mapFuncCb = (item, index) => {
+      if (!(index % 2)) {
+        return item;
+      }
+      else {
+        // console.log(item);
+        return item.split('').reverse().join('');
+      }
+    }
+    // let mappedArray = array.map(mapFuncCb);
+    return array.map(mapFuncCb).join(' ');
+  }
+  
+  
+//   console.log(reverseStr(" ") === " ");
+//   console.log(reverseStr("I really don't like reversing strings!") === "I yllaer don't ekil reversing !sgnirts");
+
+
+
+
+
