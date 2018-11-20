@@ -8,7 +8,7 @@ a part of the word in this kata.
 
 ------------------------------------------------------
 
-## SOLUTION:
+### SOLUTION:
 Initial: 
 ```js
 function reverse(str) {
