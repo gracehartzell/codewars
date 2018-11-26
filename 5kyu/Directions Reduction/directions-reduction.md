@@ -35,6 +35,3 @@ Hence the result path is itself : ["NORTH", "WEST", "SOUTH", "EAST"].
 
 
 ```
-
-
-
