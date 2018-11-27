@@ -1,0 +1,29 @@
+{
+  "name": "codewars",
+  "version": "1.0.0",
+  "description": "This is my collection of toy problems that I'm accumulating as I grow and learn. First try dates are noted before the solution to each problem so that I can go back at some point and see how I've grown and been able to make my code more succinct.",
+  "main": "kata.js",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.6.0",
+    "regenerator-runtime": "^0.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gracehartzell/codewars.git"
+  },
+  "author": "Grace Hartzell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gracehartzell/codewars/issues"
+  },
+  "homepage": "https://github.com/gracehartzell/codewars#readme"
+}
