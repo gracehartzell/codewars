@@ -59,11 +59,11 @@ const queueTime = (customers, n) => {
 #### Steps:
 1. Get it visualized, for instance `queueTime([10,2,3,3], 2)`: 
 
-|  tills  |    |     |     |   | total|
-|:-------:|----|-----|-----|---|------|
-| till 0  | 10 |     |     |   |  10  |
-| till 1  | 2  |  3  |  2  |   |  8   |
-| total   |    | (5) | (8) |   |  10  |
+|  tills   |     |     |     |     | total |
+|:--------:|-----|-----|-----|-----|-------|
+| till 0   | 10  |  -  |  -  |  -  |  10   |
+| till 1   | 2   |  3  |  2  |  -  |  8    |
+| progress |(10) | (5) | (8) |  -  |  10   |
 
 2. Need to loop through and apply the next number to a queue while keeping track of 
 the amount of time taken by other customers in other queues. Until the number is 
