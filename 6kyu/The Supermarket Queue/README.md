@@ -59,8 +59,8 @@ const queueTime = (customers, n) => {
 #### Steps:
 1. Get it visualized, for instance `queueTime([10,2,3,3], 2)`: 
 
-|  tills  | time taken         | time |
-|:-------:|:------------------:|------|
+|  tills  |    |     |     |   | total|
+|:-------:|----|-----|-----|---|------|
 | till 0  | 10 |     |     |   |  10  |
 | till 1  | 2  |  3  |  2  |   |  8   |
 | total   |    | (5) | (8) |   |  10  |
