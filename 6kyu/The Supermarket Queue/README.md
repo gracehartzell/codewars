@@ -91,7 +91,7 @@ it would tally up in realtime.
   * FIFO (first in, first out)
   * [Helpful explanation on YouTube](https://www.youtube.com/watch?v=bK7I79hcm08)
 * **Making a queue:**
-  ```js
+```js
 function Queue() {
   collection = [];
   this.showCollection = () => {
@@ -125,7 +125,7 @@ newQueue.showCollection(); // [3, 6, 9]
 console.info(newQueue.frontOfLine()); // 3
 console.info(newQueue.sizeOfLine()); // 4
 console.info(newQueue.lineEmpty()) // false
-  ```
+```
 
 Vocabulary: 
 * `function.apply(thisArg, [argArray])`: method that calls a function with a given `this` value and `arguments`
@@ -133,6 +133,7 @@ provided as an array.
   * `thisArg` (optional): in a non-strict mode function, `null` and `undefined` are replaced by the global object
   * `argArray` (optional): array-like object that specifies the arguments for the function. If no arguments provided,
   `null` or `undefined` should be placed for it.
+
 Example: 
 ```js
 const numbers = [5, 6, 2, 3, 8];
