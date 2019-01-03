@@ -12,7 +12,9 @@
     "jest": "^23.6.0",
     "regenerator-runtime": "^0.13.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "^1.15.3"
+  },
   "scripts": {
     "test": "jest"
   },

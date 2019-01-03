@@ -9,3 +9,22 @@ Example:
 Input: [1,8,6,2,5,4,8,3,7]
 Output: 49
 ```
+
+-----------------------------------
+## Solution
+```js
+const maxArea2 = (input) => {
+  let max = 0;
+    for (let i = 0; i < input.length-1; i++) {
+        for (let e = i + 1; e < input.length; e++) {
+            width = e - i;
+            height = Math.min(input[e], input[i])
+            volume = width * height;
+            if (volume > max) {
+                max = volume
+            }
+        }
+    }
+    return max;
+};
+```
