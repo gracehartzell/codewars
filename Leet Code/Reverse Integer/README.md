@@ -41,6 +41,7 @@ const reverse = x => {
   return stringToNum;
 };
 
+// OR
 
 const reverse2 = x => {
   let a = 0;
