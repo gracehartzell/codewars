@@ -21,5 +21,10 @@ How many deaf rats are there?
 ----------------------------------------------------------
 ## Solution
 ```js
-
+const countDeafRats = town => {
+ const [ left, right ] = town.split('P');
+ const newRatChain = left + right.split('').reverse().join('');
+ const matches = (newRatChain.match(/O~|~O/gi)||[]).filter(rat=> rat === 'O~');
+ return matches.length;
+}
 ```
