@@ -6,11 +6,11 @@
 
 ```js
 const factorial = num => {
-  let factorialResult = 1;
-  for (let i = 1; i <= num; i--) {
-    factorialResult *= i;
+  if (num === 1 || num === 0) return 1;
+  for (let i = num - 1; i >= 1; i--) {
+    num *= i;
   }
-  return factorialResult;
+  return num;
 };
 ```
 
@@ -19,12 +19,13 @@ const factorial = num => {
 
 ```js
 const factorial = num => {
-  let factorialResult = 1;
-  while (num >= 1) {
-    factorialResult *= num;
-    break;
+  let accumulator = num;
+  if (num === 0 || num === 1) return 1;
+  while (num > 1) {
+    num--;
+    accumulator *= num;
   }
-  return factorialResult;
+  return accumulator;
 };
 ```
 
@@ -32,6 +33,6 @@ const factorial = num => {
 
 ```js
 const factorial = num => {
-  return num === 1 ? 1 : num * factorial(num - 1);
-};
+  return (num === 1) ? 1 : num * factorial( num - 1 );
+}
 ```
