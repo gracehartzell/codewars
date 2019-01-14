@@ -1,57 +1,3 @@
-// ==============================
-// PLEASE READ THE USAGE BELOW BEFORE WRITING CODE
-// The goal is for you to write the code for the Tree structure
-// so that it can be used by others in the examples below:
-// ==============================
-
-// Creating the tree && connecting nodes
-// ==================
-// let myTree = new Tree(5);
-// myTree.addNode(1);
-// myTree.addNode(10);
-
-// VISUAL:     5
-//            / \
-//           1   10
-
-// Adding grand children:
-// ==================
-// myTree.addNode(-5)
-// myTree.addNode(2)
-// myTree.addNode(8)
-// myTree.addNode(50)
-//
-// VISUAL:        5
-//             /    \
-//            1      10
-//          /  \    /  \
-//        -5    2   8   50
-
-//printBreadthFirst:
-//==================
-// VISUAL:        5
-//             /    \
-//            1      10
-//          /  \    /  \
-//        -5    2   8   50
-//myTree.printBreadthFirst()
-//5,1,10,-5,2,8,50
-
-// Removing children:
-// ==================
-// VISUAL:        5
-//             /    \
-//            1      10
-//          /  \    /  \
-//        -5    2  8    50
-
-// myTree.removeNode(10)
-// VISUAL:       5
-//             /   \
-//            1     8
-//          /  \     \
-//        -5    2     50
-
 class Node {
   constructor(value) {
     this.value = value;
@@ -83,8 +29,6 @@ class Tree {
       else this.nodeInsertLocation(node.right, nodeToAdd);
     }
   }
-
-  // printBreadthFirst()
 
   removeChild(value) {
     this.root = this.removeNode(this.root, value);
@@ -121,6 +65,21 @@ class Tree {
 
   findMinimumNode(node) {
     node.left === null ? node : this.findMinimumNode(node.left);
+  }
+
+  printBreadthFirst() {
+    const queue = [this.root];
+    let node,
+      results = [];
+
+    while (queue.length > 0) {
+      node = queue.shift();
+      results.push(node.value);
+
+      if (node.left) queue.push(node.left);
+      if (node.right) queue.push(node.right);
+    }
+    return results;
   }
 }
 
