@@ -1,0 +1,1 @@
+palindrome=( n,c)=> 
