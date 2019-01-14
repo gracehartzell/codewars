@@ -7,6 +7,7 @@ describe("Tree testing", () => {
       let myTree = new Tree(5);
 
       expect(myTree.root.value).to.eql(5);
+      expect(myTree.root).to.eql({ value: 5, left: null, right: null });
     });
   });
 
