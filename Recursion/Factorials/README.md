@@ -5,12 +5,12 @@
 - The `for` factorial (decrementing for speed):
 
 ```js
-const factorial = num => {
-  if (num === 1 || num === 0) return 1;
-  for (let i = num - 1; i >= 1; i--) {
-    num *= i;
+function factorial (num) {
+  let factorialAcc = 1;
+  for (let i = num; i > 1; i--) {
+    factorialAcc *= i;
   }
-  return num;
+  return factorialAcc;
 };
 ```
 
