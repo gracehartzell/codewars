@@ -61,18 +61,30 @@ class Node {
 }
 
 class Tree {
-  // implement the following :
-  // Properties:
-  // value -> returns value of node it was given when it was created
-  // children -> returns direct children of a node as an array
   constructor(value) {
-    this.value = value;
+    this.root = {
+      value: value,
+      left: null,
+      right: null
+    };
   }
-  // Methods:
-  addChild(value) {
-    
+  addNode(value) {
+    const nodeToAdd = new Node(value);
+    if (this.root === null) this.root = nodeToAdd;
+    else this.nodeInsertLocation(this.root, nodeToAdd);
+  }
+  nodeInsertLocation(node, nodeToAdd) {
+    if (nodeToAdd.value < node.value) {
+      if (node.left === null) node.left = nodeToAdd;
+      else this.nodeInsertLocation(node.left, nodeToAdd);
+    } else {
+      if (node.right === null) node.right = nodeToAdd;
+      else this.nodeInsertLocation(node.right, nodeToAdd);
+    }
   }
 
   // printBreadthFirst()
   // removeChild()
 }
+
+module.exports = Tree;
