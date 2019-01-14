@@ -78,6 +78,8 @@ describe("Tree testing", () => {
 
   describe("Removal of child", () => {
     it("should remove a child with given value", () => {
+      let myTree = new Tree(5);
+
       myTree.addNode(1);
       myTree.addNode(10);
       myTree.addNode(-5);
@@ -86,14 +88,18 @@ describe("Tree testing", () => {
       myTree.addNode(50);
 
       myTree.removeChild(8);
-
-      expect(myTree.children[1]).to.eql([
-        { value: 10, children: [{ value: 50, children: null }] }
-      ]);
+      expect(myTree.root.right).to.eql({
+        value: 10,
+        left: null,
+        right: { value: 50, left: null, right: null }
+      });
 
       myTree.removeChild(50);
-
-      expect(myTree.children[1]).to.eql([{ value: 10, children: null }]);
+      expect(myTree.root.right).to.eql({
+        value: 10,
+        left: null,
+        right: null
+      });
     });
   });
 });
