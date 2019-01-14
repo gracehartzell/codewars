@@ -28,9 +28,14 @@ Line.WhoIsNext(names, 7230702951) == "Leonard"
 ------------------------------------------------------
 ## SOLUTION:
 ```js
-function whoIsNext(names, r){
-
-}
+const whoIsNext = (names, r) => {
+  const queue = names.length;
+  let total = names.length;
+  let num = 1;
+  while (total < r) {
+    num *= 2;
+    total += queue * num;
+  }
+  return names[Math.ceil((r + queue * num - total) / num) - 1];
+};
 ```
-
-### My Dialogue
