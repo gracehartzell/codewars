@@ -1,6 +1,6 @@
 // ==============================
 // PLEASE READ THE USAGE BELOW BEFORE WRITING CODE
-// The goal is for you to write the code for the Tree structure 
+// The goal is for you to write the code for the Tree structure
 // so that it can be used by others in the examples below:
 // ==============================
 
@@ -16,7 +16,7 @@
 
 // Adding grand children:
 // ==================
-// myTree.addNode(-5) 
+// myTree.addNode(-5)
 // myTree.addNode(2)
 // myTree.addNode(8)
 // myTree.addNode(50)
@@ -52,13 +52,27 @@
 //          /  \     \
 //        -5    2     50
 
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.left = null;
+    this.right = null;
+  }
+}
+
 class Tree {
   // implement the following :
   // Properties:
   // value -> returns value of node it was given when it was created
   // children -> returns direct children of a node as an array
-  // Methods: 
-  // addChild()
+  constructor(value) {
+    this.value = value;
+  }
+  // Methods:
+  addChild(value) {
+    
+  }
+
   // printBreadthFirst()
   // removeChild()
-};
+}
