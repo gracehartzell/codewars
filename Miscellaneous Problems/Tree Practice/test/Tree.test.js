@@ -65,6 +65,8 @@ describe("Tree testing", () => {
 
   describe("Breadth First Search", () => {
     it("should print all nodes in BFS order", () => {
+      let myTree = new Tree(5);
+
       myTree.addNode(1);
       myTree.addNode(10);
       myTree.addNode(-5);
@@ -72,7 +74,7 @@ describe("Tree testing", () => {
       myTree.addNode(8);
       myTree.addNode(50);
 
-      expect(myTree.printBreadthFirst()).to.eql(5, 1, 10, -5, 2, 8, 50);
+      expect(myTree.printBreadthFirst()).to.eql([5, 1, 10, -5, 2, 8, 50]);
     });
   });
 
