@@ -28,10 +28,37 @@ describe("Tree testing", () => {
       myTree.addNode(8);
       myTree.addNode(50);
 
+      expect(myTree.root.left.value).to.eql(1);
+      expect(myTree.root.right.value).to.eql(10);
       expect(myTree.root.left.left.value).to.eql(-5);
       expect(myTree.root.left.right.value).to.eql(2);
       expect(myTree.root.right.left.value).to.eql(8);
       expect(myTree.root.right.right.value).to.eql(50);
+    });
+    it("should take appropriate shape", () => {
+      let myTree = new Tree(5);
+      myTree.addNode(1);
+      myTree.addNode(10);
+      myTree.addNode(-5);
+      myTree.addNode(2);
+      myTree.addNode(8);
+      myTree.addNode(50);
+
+      expect(myTree.root.left).to.eql({
+        value: 1,
+        left: { value: -5, left: null, right: null },
+        right: { value: 2, left: null, right: null }
+      });
+      expect(myTree.root.right).to.eql({
+        value: 10,
+        left: { value: 8, left: null, right: null },
+        right: { value: 50, left: null, right: null }
+      });
+      expect(myTree.root.right.left).to.eql({
+        value: 8,
+        left: null,
+        right: null
+      });
     });
   });
 
