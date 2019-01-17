@@ -1,0 +1,18 @@
+{
+  "name": "merge-sort",
+  "version": "1.0.0",
+  "description": "Mergesort implementation in JavaScript with tests!",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "author": "Grace Hartzell",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
