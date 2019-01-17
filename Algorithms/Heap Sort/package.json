@@ -1,0 +1,30 @@
+{
+  "name": "heap-sort",
+  "version": "1.0.0",
+  "description": "Heap Sort implementation in JavaScript with tests",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gracehartzell/toy-problems.git"
+  },
+  "keywords": [
+    "heapsort",
+    "javascript"
+  ],
+  "author": "Grace Hartzell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gracehartzell/toy-problems/issues"
+  },
+  "homepage": "https://github.com/gracehartzell/toy-problems#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
