@@ -44,8 +44,8 @@ const memoizeGEN = cb => {
 const memoizedGenericFunc = memoizeGEN();
 
 try {
-  console.log("calculated value:", memoizedDoubleAdd(9, 10)); // calculated
-  console.log("cached value:", memoizedDoubleAdd(9, 10)); // cached
+  console.log("calculated value:", memoizedGenericFunc(9, 10)); // calculated
+  console.log("cached value:", memoizedGenericFunc(9, 10)); // cached
 } catch (e) {
   console.error("Generic memoized:", e);
 }
