@@ -53,3 +53,16 @@ SECOND CALL:
 ******** then passing accumulated values down into the recursion each time
 
 */
+
+/********************************** ITERATIVE VERSION **********************************/
+
+function joinElementsIterative(array, joinString) {
+  let resultSoFar = "";
+
+  for (let i = 0; i < array.length - 1; i++) {
+    resultSoFar += array[i] + joinString;
+  }
+  return resultSoFar + array[array.length - 1];
+}
+
+console.log(joinElementsIterative(["s", "cr", "t cod", " :) :)"], "e"));
