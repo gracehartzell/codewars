@@ -6,7 +6,7 @@
 
 ## Sorting Steps:
 
-1. **Divide:** break down the array into smaller pieces.
+1. **Divide:** break down the array into smaller pieces until each item is by itself.
 
 - `1 list -> 2 lists -> 4 lists -> 8 lists`
 
@@ -22,3 +22,5 @@
 | ---------------- | :-----------: | ------------: | ------------: |
 | Time Complexity  | `O (n log n)` | `O (n log n)` | `O (n log n)` |
 | Space Complexity |               |               |       `O (n)` |
+
+
