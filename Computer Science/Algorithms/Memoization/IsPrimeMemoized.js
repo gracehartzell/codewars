@@ -1,4 +1,4 @@
-// Putting in file instead of importing for Quokka purposes 
+// Putting in file instead of importing for Quokka purposes
 const memoizeGEN = cb => {
   let cache = {};
   return (...args) => {
@@ -39,3 +39,5 @@ try {
 } catch (e) {
   console.error("Generic memoized:", e);
 }
+
+
