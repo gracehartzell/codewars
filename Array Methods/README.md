@@ -15,11 +15,13 @@ An area for rebuilding common array methods in order to best understand them.
 - `filter()` - Creates a **new** array with each of the elements that pass the test
   implemented by the provided function.
   - Syntax: `arr.filter(callback(element[, index[, array]])[,thisArg])`
-    - `callback`
-    - `element`
-    - `index`: (optional)
-    - `array`: (optional)
-    - `thisArg`: (optional)
+    - `callback`: Predicate to test each element of the array. Returns a boolean for
+      element. Accepts three arguments:
+    - `element`: current element being processed in the array
+    - `index`: (optional) index of the current element (being processed)
+    - `array`: (optional) the particular array that the `filter` method was called upon
+    - `thisArg`: (optional) placing the pronoun in the sentence. (i.e. value to use as
+      `this` when executing `callback`)
 - `flat()` - Creates a new array with all sub-arrays concatenated into it
   recursively up to a specified depth. Syntax: `arr.flat([depth])`.
 - `forEach()`
