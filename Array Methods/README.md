@@ -10,9 +10,10 @@ An area for rebuilding common array methods in order to best understand them.
     - `index`: (optional) index of the current element being processed in the array.
     - `array`: (optional) array method was called upon.
     - `thisArg`: (optional) value to use as `this` when executing the callback.
-  - Returns: 
+  - Returns:
   - Edges: returns `true` for any condition put on an empty array
-- `filter()`
+- `filter()` - Creates a **new** array with each of the elements that pass the test
+  implemented by the provided function.
 - `flat()` - Creates a new array with all sub-arrays concatenated into it
   recursively up to a specified depth. Syntax: `arr.flat([depth])`.
 - `forEach()`
