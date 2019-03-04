@@ -25,8 +25,14 @@ An area for rebuilding common array methods in order to best understand them.
 - `flat()` - Creates a new array with all sub-arrays concatenated into it
   recursively up to a specified depth. Syntax: `arr.flat([depth])`.
 - `forEach()`
+  - Syntax:
 - `Array.from`()
+  - Syntax:
 - `map()`
+  - Syntax:
 - `reduce()`
+  - Syntax:
 - `some()`
+  - Syntax:
 - `sort()`
+  - Syntax:
