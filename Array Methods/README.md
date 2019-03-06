@@ -26,13 +26,25 @@ An area for rebuilding common array methods in order to best understand them.
   recursively up to a specified depth. Syntax: `arr.flat([depth])`.
 - `forEach()`
   - Syntax:
+  - Returns:
+  - Edges: returns `true` for any condition put on an empty array
 - `Array.from`()
   - Syntax:
+  - Returns:
+  - Edges: returns `true` for any condition put on an empty array
 - `map()`
   - Syntax:
+  - Returns:
+  - Edges: returns `true` for any condition put on an empty array
 - `reduce()`
   - Syntax:
+  - Returns:
+  - Edges: returns `true` for any condition put on an empty array
 - `some()`
   - Syntax:
+  - Returns:
+  - Edges: returns `true` for any condition put on an empty array
 - `sort()`
   - Syntax:
+  - Returns: 
+  - Edges: returns `true` for any condition put on an empty array
