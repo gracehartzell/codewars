@@ -21,7 +21,7 @@
 //         ? right += 1
 //         : left += 0;
 //     }
-//     return (left > right) 
+//     return (left > right)
 //       ? `Left side wins!`
 //       : (left < right)
 //       ? `Right side wins!`
@@ -29,15 +29,18 @@
 // }
 
 function alphabetWar(fight) {
-  const values = {'w': 4, 'p': 3, 'b': 2, 's': 1, 'm': -4, 'q': -3, 'd': -2, 'z': -1};
+  const values = { w: 4, p: 3, b: 2, s: 1, m: -4, q: -3, d: -2, z: -1 };
   let result = 0;
-  fight.split('').map((t) => result += values[t] ? values[t] : 0  );
-  return (result < 0 ? 'Right side wins!' : (result > 0) ? 'Left side wins!' : 'Let\'s fight again!' )
+  fight.split("").map(t => (result += values[t] ? values[t] : 0));
+  return result < 0
+    ? "Right side wins!"
+    : result > 0
+    ? "Left side wins!"
+    : "Let's fight again!";
 }
 
-
 // TESTS
-console.log(alphabetWar('mbgjjzd')) //
-console.log( alphabetWar("z") ===  "Right side wins!" );
-console.log( alphabetWar("zdqmwpbs") === "Let's fight again!" );
-console.log( alphabetWar("zzzzs") === "Right side wins!" );
+console.log(alphabetWar("mbgjjzd")); //
+console.log(alphabetWar("z") === "Right side wins!");
+console.log(alphabetWar("zdqmwpbs") === "Let's fight again!");
+console.log(alphabetWar("zzzzs") === "Right side wins!");
